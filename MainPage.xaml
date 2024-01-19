@@ -11,8 +11,12 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid Grid.Row="1">
-
-        <InkCanvas x:Name="inkCanvas" />
+        <ScrollViewer x:Name="scroll">
+            <Grid Grid.Row="1">
+                <Canvas x:Name="gridCanvas"></Canvas>
+                <InkCanvas x:Name="inkCanvas"/>
+            </Grid>
+        </ScrollViewer>
         <InkToolbar x:Name="inkToolbar"
           VerticalAlignment="Top"
           TargetInkCanvas="{x:Bind inkCanvas}" />
